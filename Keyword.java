@@ -64,6 +64,7 @@ public class Keyword {
     public String themeFinder()
     {
         this.makeKeywords();
+        this.removeFiller();
         String theme = "";
         int wordcount = 0;
         for (String word : keywords) {
