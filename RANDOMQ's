@@ -2,12 +2,12 @@ import java.util.*;
 
 
 public class Main{
-	public static void main (String args[]){
+	public void main (String args[]){
 	}
 	
-	static ArrayList<Integer> usedNum = new ArrayList<Integer>();
+        ArrayList<Integer> usedNum = new ArrayList<Integer>();
 	
-	public static String randomQuestions(){
+	public String randomQuestions(){
 		boolean reused = true;
 		
 		String[] questions = {"What do you think is the biggest challenge facing humanity right now? ",
