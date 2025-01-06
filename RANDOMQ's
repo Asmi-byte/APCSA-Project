@@ -1,0 +1,55 @@
+import java.util.*;
+
+
+public class Main{
+	public static void main (String args[]){
+	}
+	
+	static ArrayList<Integer> usedNum = new ArrayList<Integer>();
+	
+	public static String randomQuestions(){
+		boolean reused = true;
+		
+		String[] questions = {"What do you think is the biggest challenge facing humanity right now? ",
+		"If you could live anywhere in the world, where would it be and why? ", "Do you think its more important to follow your dreams or to be practical in life? ",
+		"How do you handle the balance between personal desires and responsibilities to others? ",
+		"What would you do if you knew you couldn’t fail? ",
+		"If you could have a conversation with any historical figure, who would it be and what would you ask them? ",
+		"Do you think people are inherently good, bad, or somewhere in between? ",
+		"If you could experience one moment in your life over again, which would it be and why? ",
+		"How would you describe the perfect day? What would you do, who would you be with? ",
+		"What role do you think luck plays in success? Can it be controlled, or is it purely random? ",
+		"What do you think is the most important quality for a person to have in life? ",
+		"If you could instantly master any skill or talent, what would it be and why? ",
+		"How do you define success, and do you think it’s different for everyone? ",
+		"If you could spend a day in someone else’s shoes, whose life would you want to experience and what would you hope to learn from it? ",
+		"Do you think people are more influenced by their environment or their inner nature? ",
+		"If you could go back in time and give one piece of advice to your younger self, what would it be? ",
+		"How do you think your life would change if you could see the future for just one minute? ",
+		"What does happiness look like for you—something material, emotional, or a balance of both? ",
+		"Do you believe that everything happens for a reason, or is life just a series of random events? ",
+		"If you could make one change to the world, no matter how big or small, what would it be? "};
+		
+		int randomNum = (int)((Math.random()) * (questions.length));
+		
+		while(reused){
+			reused = false;
+			for(int i = 0; i < usedNum.size() ; i++){
+				if (randomNum == usedNum.get(i)){
+					randomNum = (int)((Math.random()) * (questions.length));
+					reused = true;
+				}
+			}
+		}
+		usedNum.add(randomNum);
+		
+		return questions[randomNum];
+			
+		
+		
+			
+	}
+	
+	
+
+}
