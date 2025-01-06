@@ -61,7 +61,7 @@ public class Keyword {
        }
     }
 
-    public String themeFinder()
+    public String themeFinder() //Use themefinder to find the most said word 
     {
         this.makeKeywords();
         this.removeFiller();
@@ -83,7 +83,7 @@ public class Keyword {
     }
 
 
-    public List<String> getKeywords() 
+    public List<String> getKeywords()  //raw list of all words
     {
         return keywords;
     }
