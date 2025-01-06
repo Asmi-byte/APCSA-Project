@@ -10,18 +10,19 @@ public class Main{
 	public String randomQuestions(){
 		boolean reused = true;
 		
-		String[] questions = {"What do you think is the biggest challenge facing humanity right now? ",
-		"If you could live anywhere in the world, where would it be and why? ", "Do you think its more important to follow your dreams or to be practical in life? ",
-		"How do you handle the balance between personal desires and responsibilities to others? ",
+		String[] questions = {"What are you passionate about? ",
+		"How would you descirbe a \"sucessful\" person? ",
+		"Do you think its more important to follow your dreams or to be practical in life? ",
+		"How would you descibe yourself? ",
 		"What would you do if you knew you couldn’t fail? ",
-		"If you could have a conversation with any historical figure, who would it be and what would you ask them? ",
-		"Do you think people are inherently good, bad, or somewhere in between? ",
-		"If you could experience one moment in your life over again, which would it be and why? ",
-		"How would you describe the perfect day? What would you do, who would you be with? ",
-		"What role do you think luck plays in success? Can it be controlled, or is it purely random? ",
+		"Describe traits that makes a good friend. ",
+		"How would you descirbe your role model? ",
+		"What motivates you? ",
+		"What makes you unique? ",
+		"What are some of your interests? ",
 		"What do you think is the most important quality for a person to have in life? ",
-		"If you could instantly master any skill or talent, what would it be and why? ",
-		"How do you define success, and do you think it’s different for everyone? ",
+		"What is an attribute or traits do you wish you had? ",
+		"How do you feel about your family friends? ",
 		"If you could spend a day in someone else’s shoes, whose life would you want to experience and what would you hope to learn from it? ",
 		"Do you think people are more influenced by their environment or their inner nature? ",
 		"If you could go back in time and give one piece of advice to your younger self, what would it be? ",
@@ -29,6 +30,7 @@ public class Main{
 		"What does happiness look like for you—something material, emotional, or a balance of both? ",
 		"Do you believe that everything happens for a reason, or is life just a series of random events? ",
 		"If you could make one change to the world, no matter how big or small, what would it be? "};
+		
 		
 		int randomNum = (int)((Math.random()) * (questions.length));
 		
