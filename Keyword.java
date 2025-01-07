@@ -85,9 +85,34 @@ public class Keyword {
 	public String makeWordBasic(String input)
 	{
 		
-		if(input.indexOf("test")!=-1)
-			return "hi";
-			
+		if(input.indexOf("ambit")!=-1)
+			return "ambitious";
+		else if(input.indexOf("creat")!=-1)
+			return "creative";
+		else if(input.indexOf("passion")!=-1)
+			return "compassionate";
+		else if(input.indexOf("conscien")!=-1)
+			return "conscientious";
+		else if(input.indexOf("courag")!=-1)
+			return "courageous";
+		else if(input.indexOf("flex")!=-1)
+			return "flexible";
+		else if(input.indexOf("hones")!=-1)
+			return "honest";
+		else if(input.indexOf("humb")!=-1)
+			return "humble";
+		else if(input.indexOf("honor")!=-1 || input.indexOf("integ")!=-1)
+			return "honorable ";
+		else if(input.indexOf("loya")!=-1)
+			return "loyal";
+		else if(input.indexOf("patien")!=-1)
+			return "patient";
+		else if(input.indexOf("persis")!=-1 || input.indexOf("perserver")!=-1)
+			return "persistent";
+		else if(input.indexOf("resil")!=-1)
+			return "resilient";
+		else if(input.indexOf("discipl")!=-1)
+			return "disciplined";
 		return input;
 	}
 	
