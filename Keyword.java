@@ -82,7 +82,15 @@ public class Keyword {
         return theme;
     }
 
-
+	public String makeWordBasic(String input)
+	{
+		
+		if(input.indexOf("test")!=-1)
+			return "hi";
+			
+		return input;
+	}
+	
     public List<String> getKeywords()  //raw list of all words
     {
         return keywords;
