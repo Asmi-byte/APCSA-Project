@@ -3,11 +3,9 @@ import java.util.*;
 
 public class Main{
 	public static void main (String args[]){
-	}
 	
         ArrayList<Integer> usedNum = new ArrayList<Integer>();
 	
-	public String randomQuestions(){
 		boolean reused = true;
 		
 		String[] questions = {"What are you passionate about? ",
@@ -43,15 +41,12 @@ public class Main{
 				}
 			}
 		}
-		usedNum.add(randomNum);
 		
-		return questions[randomNum];
-			
+		System.out.println(questions[randomNum]);
+		
+		usedNum.add(randomNum);	
 		
 		
 			
 	}
-	
-	
-
 }
