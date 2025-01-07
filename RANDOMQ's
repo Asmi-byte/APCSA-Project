@@ -10,7 +10,6 @@ public class Main{
 		
 		String[] questions = {"What are you passionate about? ",
 		"How would you descirbe a \"sucessful\" person? ",
-		"Do you think its more important to follow your dreams or to be practical in life? ",
 		"How would you descibe yourself? ",
 		"What would you do if you knew you couldn’t fail? ",
 		"Describe traits that makes a good friend. ",
@@ -19,15 +18,10 @@ public class Main{
 		"What makes you unique? ",
 		"What are some of your interests? ",
 		"What do you think is the most important quality for a person to have in life? ",
-		"What is an attribute or traits do you wish you had? ",
-		"How do you feel about your family friends? ",
-		"If you could spend a day in someone else’s shoes, whose life would you want to experience and what would you hope to learn from it? ",
-		"Do you think people are more influenced by their environment or their inner nature? ",
-		"If you could go back in time and give one piece of advice to your younger self, what would it be? ",
-		"How do you think your life would change if you could see the future for just one minute? ",
-		"What does happiness look like for you—something material, emotional, or a balance of both? ",
-		"Do you believe that everything happens for a reason, or is life just a series of random events? ",
-		"If you could make one change to the world, no matter how big or small, what would it be? "};
+		"What are traits do you wish you had? ",
+		"How would you descirbe the people around you? ",
+		"What do you think your morals are based on? ",
+		"How would your friends descirbe you? "};
 		
 		
 		int randomNum = (int)((Math.random()) * (questions.length));
@@ -46,7 +40,34 @@ public class Main{
 		
 		usedNum.add(randomNum);	
 		
+		/**
+		 * proper reusing format
+		 * 
 		
-			
+		reused = true;
+		
+		
+		randomNum = (int)((Math.random()) * (questions.length));
+		
+		while(reused){
+			reused = false;
+			for(int i = 0; i < usedNum.size() ; i++){
+				if (randomNum == usedNum.get(i)){
+					randomNum = (int)((Math.random()) * (questions.length));
+					reused = true;
+				}
+			}
+		}
+		
+		System.out.println(questions[randomNum]);
+		
+		usedNum.add(randomNum);	
+		
+		**/
+		
+		
 	}
 }
+	
+
+
