@@ -82,38 +82,55 @@ public class Keyword {
         return theme;
     }
 
-	public String makeWordBasic(String input)
+	public void makeWordBasic()
 	{
-		
-		if(input.indexOf("ambit")!=-1)
-			return "ambitious";
-		else if(input.indexOf("creat")!=-1)
-			return "creative";
-		else if(input.indexOf("passion")!=-1)
-			return "compassionate";
-		else if(input.indexOf("conscien")!=-1)
-			return "conscientious";
-		else if(input.indexOf("courag")!=-1)
-			return "courageous";
-		else if(input.indexOf("flex")!=-1)
-			return "flexible";
-		else if(input.indexOf("hones")!=-1)
-			return "honest";
-		else if(input.indexOf("humb")!=-1)
-			return "humble";
-		else if(input.indexOf("honor")!=-1 || input.indexOf("integ")!=-1)
-			return "honorable ";
-		else if(input.indexOf("loya")!=-1)
-			return "loyal";
-		else if(input.indexOf("patien")!=-1)
-			return "patient";
-		else if(input.indexOf("persis")!=-1 || input.indexOf("perserver")!=-1)
-			return "persistent";
-		else if(input.indexOf("resil")!=-1)
-			return "resilient";
-		else if(input.indexOf("discipl")!=-1)
-			return "disciplined";
-		return input;
+		String[] input = new String[keywords.size()];
+		for(int i = 0; i <keywords.size(); i++)
+		{
+			input[i] = keywords.get(i);
+		}
+		for(int i = 0; i < keywords.size(); i++)
+		{
+			
+			if(input[i].indexOf("ambit")!=-1)
+				input[i] = "ambitious";
+			else if(input[i].indexOf("creat")!=-1)
+				input[i] = "creative";
+			else if(input[i].indexOf("passion")!=-1)
+				input[i] = "compassionate";
+			else if(input[i].indexOf("conscien")!=-1)
+				input[i] = "conscientious";
+			else if(input[i].indexOf("courag")!=-1)
+				input[i] = "courageous";
+			else if(input[i].indexOf("flex")!=-1)
+				input[i] = "flexible";
+			else if(input[i].indexOf("hones")!=-1)
+				input[i] = "honest";
+			else if(input[i].indexOf("humb")!=-1)
+				input[i] = "humble";
+			else if(input[i].indexOf("honor")!=-1)
+				input[i] = "honorable ";
+			else if(input[i].indexOf("loya")!=-1)
+				input[i] = "loyal";
+			else if(input[i].indexOf("patien")!=-1)
+				input[i] = "patient";
+			else if(input[i].indexOf("persis")!=-1)
+				input[i] = "persistent";
+			else if(input[i].indexOf("resil")!=-1)
+				input[i] = "resilient";
+			else if(input[i].indexOf("discipl")!=-1)
+				input[i] = "disciplined";
+			else if(input[i].indexOf("kind")!=-1)
+				input[i] = "kind";
+			else
+			{
+				input[i] = input[i];
+			}
+		}
+		for(int i = 0; i < keywords.size(); i++)
+		{
+			keywords.set(i,input[i]);
+		}
 	}
 	
     public List<String> getKeywords()  //raw list of all words
