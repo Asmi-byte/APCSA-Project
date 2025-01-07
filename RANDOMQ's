@@ -39,7 +39,9 @@ public class Main{
 		System.out.println(questions[randomNum]);
 		
 		usedNum.add(randomNum);	
-		
+
+
+
 		/**
 		 * proper reusing format
 		 * 
