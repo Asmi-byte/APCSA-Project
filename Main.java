@@ -84,6 +84,8 @@ public class Main{
 		//used after all questions are asked
 		
 		Keyword runner = new Keyword(answer);
+		runner.themeFinder();
+		System.out.println(runner.themeFinder());
 
 		
 		
