@@ -62,9 +62,11 @@ public class Keyword {
     }
 
     public String themeFinder() //Use themefinder to find the most said word 
-    {	
+    {
+		System.out.println("test");
         this.makeKeywords();
-        this.removeFiller();
+        this.removeFiller();    
+        this.makeWordBasic();
         String theme = "";
         int wordcount = 0;
         for (String word : keywords) {
@@ -84,10 +86,12 @@ public class Keyword {
 
 	public void makeWordBasic()
 	{
+		System.out.print("test");
 		String[] input = new String[keywords.size()];
 		for(int i = 0; i <keywords.size(); i++)
 		{
 			input[i] = keywords.get(i);
+			System.out.print(input[i]);
 		}
 		for(int i = 0; i < keywords.size(); i++)
 		{
