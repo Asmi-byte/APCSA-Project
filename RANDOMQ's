@@ -42,9 +42,10 @@ public class Main{
 		
 		System.out.println(questions[randomNum]);
 		
-		answer += input.nextLine() + " ";
+		answer += input.nextLine();
 		
 		usedNum.add(randomNum);	
+		
 
 
 
@@ -70,7 +71,7 @@ public class Main{
 		
 		System.out.println(questions[randomNum]);
 		
-		answer += input.nextLine() + " ";
+		answer += input.nextLine();
 		
 		usedNum.add(randomNum);
 		
@@ -78,6 +79,11 @@ public class Main{
 		System.out.println(answer);	
 		
 		**/
+		
+		
+		//used after all questions are asked
+		
+		Keyword runner = new Keyword(answer);
 
 		
 		
