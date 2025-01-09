@@ -67,9 +67,13 @@ public class Main{
 			answer += input.nextLine();
 			usedNum.add(randomNum);
 			
+			//Keyword object 
+			
 			Keyword runner = new Keyword(answer);
 			runner.themeFinder();
 			System.out.println(runner.themeFinder());
+			
+			//Asks if user wants to continue
 			
 			while (properInput == false){
 				System.out.println("Would you like to be asked more questions(Y/N)? ");
@@ -83,12 +87,6 @@ public class Main{
 					properInput = true;
 				}
 			}
-			
-			
-			
-			
-				
-			
 		}
 		
 
