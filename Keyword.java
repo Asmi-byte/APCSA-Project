@@ -63,7 +63,6 @@ public class Keyword {
 
     public String themeFinder() //Use themefinder to find the most said word 
     {
-		System.out.println("test");
         this.makeKeywords();
         this.removeFiller();    
         this.makeWordBasic();
@@ -86,16 +85,13 @@ public class Keyword {
 
 	public void makeWordBasic()
 	{
-		System.out.print("test");
 		String[] input = new String[keywords.size()];
 		for(int i = 0; i <keywords.size(); i++)
 		{
 			input[i] = keywords.get(i);
-			System.out.print(input[i]);
 		}
 		for(int i = 0; i < keywords.size(); i++)
-		{
-			
+		{		
 			if(input[i].indexOf("ambit")!=-1)
 				input[i] = "ambitious";
 			else if(input[i].indexOf("creat")!=-1)
@@ -126,6 +122,8 @@ public class Keyword {
 				input[i] = "disciplined";
 			else if(input[i].indexOf("kind")!=-1)
 				input[i] = "kind";
+			else if(input[i].indexOf("nic")!=-1)
+				input[i] = "nice";
 			else
 			{
 				input[i] = input[i];
@@ -135,6 +133,7 @@ public class Keyword {
 		{
 			keywords.set(i,input[i]);
 		}
+		
 	}
 	
     public List<String> getKeywords()  //raw list of all words
