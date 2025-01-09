@@ -136,6 +136,15 @@ public class Keyword {
 		
 	}
 	
+	public String compareToCelebrity(String userInput)
+	{
+		if(userInput.equals("kind"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said 'For beautiful eyes, look for the good in others;for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.'";
+		}
+		return "You are a unique individual and unlike any celebrity in our database!";
+	}
+	
     public List<String> getKeywords()  //raw list of all words
     {
         return keywords;
