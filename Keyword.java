@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.io.FileReader;
-import java.io.IOException;
-
+import java.util.*;
+import java.io.*;
 public class Keyword {
     private String[] userWords;
     private List<String> keywords;
@@ -34,38 +31,53 @@ public class Keyword {
         }
     }
 
-  public void removeFiller()
+public void removeFiller()
+{
+    try
     {
-      try
-        {
-
-        FileReader input = new FileReader("filler.txt");
-        String stuff = input.getEncoding();
-        String[] stopWords = stuff.split("\n");
-        for (String word: stopWords)
-            {
-                for(int i = 0; i < keywords.size(); i++)
-                    {
-                        String current = keywords.get(i);
-                        if (word.equals(current))
-                        {
-                            keywords.remove(i);
-                            i--;
-                        }
-                    }
-            }
-        }
-      catch(IOException e)
-        {
-           System.out.println("Error closing FileReader: " + e.getMessage());
-       }
-    }
+		Scanner input = new Scanner("filler.txt");
+		String[] stopWords = new String[17]; //size is the number of adjectives in filler.txt
+		int counter = 0;
+		boolean removeIndex = true;
+		while(input.hasNextLine())
+		{
+			stopWords[counter] = input.nextLine();
+			System.out.print(stopWords + " ");
+		}		
+		
+		for(int i = 0; i< keywords.size(); i++)
+		{
+			String word = keywords.get(i);
+			for(int j = 0; j < stopWords.length; j++)
+			{
+				String current = stopWords[j];
+				System.out.println(word + " " + current);
+				if (word.equals(current))
+				{
+					
+					removeIndex = false;
+				}
+			}
+			if(removeIndex)
+			{
+				keywords.remove(i);
+				i--;
+			}
+			removeIndex = true;
+		}
+		//System.out.print(keywords);
+      }
+      catch(Exception e)
+      {
+		 System.out.println("Error closing Scanner: " + e.getMessage());
+      }
+}
 
     public String themeFinder() //Use themefinder to find the most said word 
     {
         this.makeKeywords();
-        this.removeFiller();    
         this.makeWordBasic();
+        this.removeFiller();           
         String theme = "";
         int wordcount = 0;
         for (String word : keywords) {
@@ -122,7 +134,7 @@ public class Keyword {
 				input[i] = "disciplined";
 			else if(input[i].indexOf("kind")!=-1)
 				input[i] = "kind";
-			else if(input[i].indexOf("nic")!=-1)
+			else if(input[i].indexOf("nice")!=-1)
 				input[i] = "nice";
 			else
 			{
