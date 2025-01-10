@@ -3,13 +3,15 @@ import java.util.*;
 
 public class Main{
 	public static void main (String args[]){
-		
-		System.out.println("Hi, welcome to Celeb Check. Answer our questions and will match you up with a celebrity that matches your traits");
 	
         ArrayList<Integer> usedNum = new ArrayList<Integer>();
         Scanner input = new Scanner(System.in);
         boolean wantQuestions = true;
         int count = 0;
+        String name = "";
+        
+        System.out.println("Hi welcome to Celeb Check, Answer our questions and will match you up with a celebrity that matches your traits. Please enter your name to start the questions: ");
+        name = input.nextLine();
         
         while(wantQuestions && count < 5){
 			
