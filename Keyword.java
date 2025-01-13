@@ -35,14 +35,15 @@ public void removeFiller()
 {
     try
     {
-		Scanner input = new Scanner("filler.txt");
+		File file = new File("filler.txt");
+		Scanner moreInput = new Scanner(file);
 		String[] stopWords = new String[17]; //size is the number of adjectives in filler.txt
 		int counter = 0;
 		boolean removeIndex = true;
-		while(input.hasNextLine())
+		while(moreInput.hasNextLine())
 		{
-			stopWords[counter] = input.nextLine();
-			System.out.print(stopWords + " ");
+			stopWords[counter] = moreInput.nextLine();		
+			counter++;
 		}		
 		
 		for(int i = 0; i< keywords.size(); i++)
@@ -51,7 +52,6 @@ public void removeFiller()
 			for(int j = 0; j < stopWords.length; j++)
 			{
 				String current = stopWords[j];
-				System.out.println(word + " " + current);
 				if (word.equals(current))
 				{
 					
@@ -65,7 +65,7 @@ public void removeFiller()
 			}
 			removeIndex = true;
 		}
-		//System.out.print(keywords);
+		moreInput.close();
       }
       catch(Exception e)
       {
@@ -150,9 +150,93 @@ public void removeFiller()
 	
 	public String compareToCelebrity(String userInput)
 	{
-		if(userInput.equals("kind"))
+		if(userInput.equals("ambitious"))
 		{
-			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said 'For beautiful eyes, look for the good in others;for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.'";
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("creative"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("compassionate"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("conscientious"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("courageous"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("disciplined"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("flexible"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("hardworker"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("happy"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("honest"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("honorable"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("humble"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("humorous"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("intelligent"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("joyful"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("kind"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("loving"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("loyal"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("nice"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("patient"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("persistent"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+		}
+		else if(userInput.equals("resilient"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
 		}
 		return "You are a unique individual and unlike any celebrity in our database!";
 	}
