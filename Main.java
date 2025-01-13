@@ -1,8 +1,9 @@
 /**
 *This is the main file that we will be using to run the program
 * it takes in input using a scanner object and gives a random question to answer
-*@author Maia Katragadda & Asmita Bag
+*@author Maia Katragadda & Asmita Bag & Grant Cabay & Tristian Mettee
 */
+
 
 import java.util.*;
 
@@ -16,9 +17,11 @@ public class Main{
         int count = 0;
         String name = "";
         
+        //Intro prompts
         System.out.println("Hi welcome to Celeb Check, Answer our questions and will match you up with a celebrity that matches your traits. Please enter your name to start the questions: ");
         name = input.nextLine();
         
+        //runs until user doesn't want questions or the program runs out of questions
         while(wantQuestions && count < 5){
 			
 			String answer = "";
@@ -43,8 +46,10 @@ public class Main{
 			
 			//Question 1
 			
+			//creates a random number with the range of the length of the list
 			int randomNum = (int)((Math.random()) * (questions.length));
 			
+			//if the random number has been used it will select another random number
 			while(reused){
 				reused = false;
 				for(int i = 0; i < usedNum.size() ; i++){
@@ -55,6 +60,7 @@ public class Main{
 				}
 			}
 			
+			//prints question stores answer in string, adds question index into used index array
 			System.out.println(questions[randomNum]);
 			answer += input.nextLine();
 			usedNum.add(randomNum);	
@@ -109,47 +115,5 @@ public class Main{
 
 		}
 		
-
-
-
-
-	/**
-	 * proper reusing format
-	 * 
-	 
-		reused = true;
-		
-		
-		randomNum = (int)((Math.random()) * (questions.length));
-		
-		while(reused){
-			reused = false;
-			for(int i = 0; i < usedNum.size() ; i++){
-				if (randomNum == usedNum.get(i)){
-					randomNum = (int)((Math.random()) * (questions.length));
-					reused = true;
-				}
-			}
-		}
-		
-		System.out.println(questions[randomNum]);
-		
-		answer += input.nextLine();
-		
-		usedNum.add(randomNum);
-		
-		
-		System.out.println(answer);	
-		
-		**/
-		
-		
-
-		
-
-
-		
-		
 	}
 }
-	
