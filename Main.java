@@ -1,3 +1,9 @@
+/**
+*This is the main file that we will be using to run the program
+* it takes in input using a scanner object and gives a random question to answer
+*@author Maia Katragadda & Asmita Bag
+*/
+
 import java.util.*;
 
 
