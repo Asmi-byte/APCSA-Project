@@ -152,7 +152,7 @@ public void removeFiller()
 	{
 		if(userInput.equals("ambitious"))
 		{
-			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said 'For beautiful eyes, look for the good in others;for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.'";
 		}
 		else if(userInput.equals("creative"))
 		{
@@ -172,7 +172,7 @@ public void removeFiller()
 		}
 		else if(userInput.equals("disciplined"))
 		{
-			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+			return "You said " + userInput + " the most out of any important word! Just like you, Jake Gylenhall said 'I've learned over the years that freedom is just the other side of discipline'";
 		}
 		else if(userInput.equals("flexible"))
 		{
@@ -196,7 +196,7 @@ public void removeFiller()
 		}
 		else if(userInput.equals("humble"))
 		{
-			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+			return "You said " + userInput + " the most out of any important word! Just like you, Michael J. Fox said 'I think the scariest person in the world is the person with no sense of humor.'";
 		}
 		else if(userInput.equals("humorous"))
 		{
@@ -204,7 +204,7 @@ public void removeFiller()
 		}
 		else if(userInput.equals("intelligent"))
 		{
-			return "You said " + userInput + " the most out of any important word! Just like you, Audrey Hepburn said ''";
+			return "You said " + userInput + " the most out of any important word! Just like you, Ian McEwan said 'True intellegence requires fabulous imagination.'";
 		}
 		else if(userInput.equals("joyful"))
 		{
