@@ -29,20 +29,21 @@ public class Main{
 			boolean properInput = false;
 			String stillHere = "";
 			
-			String[] questions = {"What are you passionate about? ",
-			"How would you descirbe a \"sucessful\" person? ",
-			"How would you descibe yourself? ",
+			String[] questions = {
+			"What traits would you use to describe a \"sucessful\" person? ",
+			"What traits could you describe yourself with? ",
 			"What would you do if you knew you couldn’t fail? ",
 			"Describe traits that makes a good friend. ",
-			"How would you descirbe your role model? ",
-			"What motivates you? ",
-			"What makes you unique? ",
-			"What are some of your interests? ",
+			"How would you describe your role model? ",
+			"What type of person motivates you to do better? ",
+			"What traits makes you unique? ",
 			"What do you think is the most important quality for a person to have in life? ",
-			"What are traits do you wish you had? ",
-			"How would you descirbe the people around you? ",
-			"What do you think your morals are based on? ",
-			"How would your friends descirbe you? "};
+			"What are some traits you wish you had? ",
+			"How would you describe the people around you? ",
+			"What types of people do you think your morals are based on? ",
+			"How would your friends descirbe you? ",
+			"What are some traits you hope to never have? ",
+			"If you were reborn, what would you change about your personality? "};
 			
 			//Question 1
 			
