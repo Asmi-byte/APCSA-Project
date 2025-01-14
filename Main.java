@@ -18,7 +18,7 @@ public class Main{
         String name = "";
         
         //Intro prompts
-        System.out.println("Hi! Welcome to Celebrity Check. Answer my questions I and will match you up with a celebrity that matches your traits. \nPlease enter your name to start the questions: ");
+        System.out.println("Hi welcome to Celeb Check, Answer our questions and will match you up with a celebrity that matches your traits. Please enter your name to start the questions: ");
         name = input.nextLine();
         
         //runs until user doesn't want questions or the program runs out of questions
@@ -43,11 +43,9 @@ public class Main{
 			"What types of people do you think your morals are based on? ",
 			"How would your friends descirbe you? ",
 			"What are some traits you hope to never have? ",
-			"What would you change about your personality? "};
+			"If you were reborn, what would you change about your personality? "};
 			
 			//Question 1
-			
-			System.out.println("Let's start with question 1:");
 			
 			//creates a random number with the range of the length of the list
 			int randomNum = (int)((Math.random()) * (questions.length));
@@ -68,9 +66,7 @@ public class Main{
 			answer += input.nextLine();
 			usedNum.add(randomNum);	
 			
-			//Question 2
-			
-			System.out.println("Moving on to question 2:");
+			//Question 2 (same as question 1)
 			
 			reused = true;
 			randomNum = (int)((Math.random()) * (questions.length));
@@ -89,9 +85,7 @@ public class Main{
 			answer += input.nextLine();
 			usedNum.add(randomNum);
 			
-			//Question 3
-			
-			System.out.println("Last question " + name + ":");
+			//Question 3 (same as question 1)
 			
 			reused = true;
 			randomNum = (int)((Math.random()) * (questions.length));
@@ -109,14 +103,16 @@ public class Main{
 			System.out.println(questions[randomNum]);
 			answer += input.nextLine();
 			usedNum.add(randomNum);
+			//sets answer to lowercase to compare with texts
 			answer = answer.toLowerCase();
+			
 			//Keyword object 
 			
 			Keyword runner = new Keyword(answer);
 			runner.themeFinder();
 			System.out.println(runner.compareToCelebrity(runner.themeFinder()));
 			
-			//Asks if user wants to continue
+			//Asks if user wants to continue will stop asking questions if user says no willl continue is yes until 4 sets of questions have been asked
 			
 			while (properInput == false){
 				System.out.println("Would you like to be asked more questions(Y/N)? ");
@@ -124,12 +120,10 @@ public class Main{
 				if(stillHere.charAt(0) == 'Y' || stillHere.charAt(0) == 'y' ){
 					wantQuestions = true;
 					properInput = true;
-					System.out.println("Awesome! Let's keep comparing you to a celebrity " + name + ".");
 				}
 				else if(stillHere.charAt(0) == 'N' || stillHere.charAt(0) == 'n') {
 					wantQuestions = false;
 					properInput = true;
-					System.out.println("Okay bye " + name + "!");
 				}
 			}
 			
