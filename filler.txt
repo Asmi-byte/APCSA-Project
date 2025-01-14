@@ -19,3 +19,4 @@ loyal
 nice
 patient
 persistent
+mean

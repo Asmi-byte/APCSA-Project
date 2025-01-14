@@ -37,7 +37,7 @@ public void removeFiller()
     {
 		File file = new File("filler.txt");
 		Scanner moreInput = new Scanner(file);
-		String[] stopWords = new String[21]; //size is the number of adjectives in filler.txt
+		String[] stopWords = new String[22]; //size is the number of adjectives in filler.txt
 		int counter = 0;
 		boolean removeIndex = true;
 		while(moreInput.hasNextLine())
@@ -150,6 +150,12 @@ public void removeFiller()
 				input[i] = "humorous";	
 			else if(input[i].indexOf("funn")!=-1)
 				input[i] = "humorous";	
+			else if(input[i].indexOf("terr")!=-1)
+				input[i] = "mean";
+			else if(input[i].indexOf("horr")!=-1)
+				input[i] = "mean";
+			else if(input[i].indexOf("mean")!=-1)
+				input[i] = "mean";
 			else
 			{
 				input[i] = input[i];
@@ -235,6 +241,10 @@ public void removeFiller()
 		else if(userInput.equals("loyal"))
 		{
 			return "You said " + userInput + " the most out of any important word! Just like you, Josiah Royce said 'Unless you can find some sort of loyalty, you cannot find unity and peace in your active living'";
+		}
+		else if(userInput.equals("mean"))
+		{
+			return "You said " + userInput + " the most out of any important word! Just like you, Maia Katragadda said 'Eliminate the children'";
 		}
 		else if(userInput.equals("nice"))
 		{

@@ -22,7 +22,7 @@ public class Main{
         name = input.nextLine();
         
         //runs until user doesn't want questions or the program runs out of questions
-        while(wantQuestions && count < 5){
+        while(wantQuestions && count < 4){
 			
 			String answer = "";
 			boolean reused = true;
@@ -84,11 +84,30 @@ public class Main{
 			answer += input.nextLine();
 			usedNum.add(randomNum);
 			
+			//Question 3
+			
+			reused = true;
+			randomNum = (int)((Math.random()) * (questions.length));
+		
+			while(reused){
+				reused = false;
+				for(int i = 0; i < usedNum.size() ; i++){
+					if (randomNum == usedNum.get(i)){
+						randomNum = (int)((Math.random()) * (questions.length));
+						reused = true;
+					}
+				}
+			}
+		
+			System.out.println(questions[randomNum]);
+			answer += input.nextLine();
+			usedNum.add(randomNum);
+			answer = answer.toLowerCase();
 			//Keyword object 
 			
 			Keyword runner = new Keyword(answer);
 			runner.themeFinder();
-			System.out.println(runner.themeFinder());
+			System.out.println(runner.compareToCelebrity(runner.themeFinder()));
 			
 			//Asks if user wants to continue
 			
