@@ -18,7 +18,7 @@ public class Main{
 			String[] questions = {"What are you passionate about? ",
 			"What adjectives would you use to describe a \"sucessful\" person? ",
 			"What adjectives would you use to describe yourself? ",
-			"What would you do if you knew you couldn’t fail? ",
+			"What would you do if you knew you could not fail? ",
 			"Describe traits that makes a good friend. ",
 			"How would you descirbe your role model? ",
 			"What type of person motivates you? ",
@@ -46,6 +46,7 @@ public class Main{
 			
 			System.out.println(questions[randomNum]);
 			answer += input.nextLine();
+			answer = answer.toLowerCase();
 			usedNum.add(randomNum);	
 			
 			//Question 2
