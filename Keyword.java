@@ -1,10 +1,16 @@
 import java.util.*;
 import java.io.*;
+/**
+* this class breaks down the user input into keywords
+* it then compares the keywords against our file "filler.txt"
+* from there it compares the most said word against a quote
+* @author Grant Cabay,Asmita Bag, Maia Katragadda & Tristan Mettee
+*/
 public class Keyword {
     private String[] userWords;
     private List<String> keywords;
 
-    public Keyword(String input) 
+    public Keyword(String input)  //constructur stores string input as a list of words.
   {
         this.userWords = input.split(" ");
 
@@ -12,7 +18,7 @@ public class Keyword {
 
     }
 
-    public void makeKeywords()
+    public void makeKeywords() //removes punctuation/spaces and adds words to string List keywords
     {
         keywords = new ArrayList<>();
     
@@ -31,7 +37,7 @@ public class Keyword {
         }
     }
 
-public void removeFiller()
+public void removeFiller() //get rid of all words but the ones in filler.txt
 {
     try
     {
@@ -95,7 +101,7 @@ public void removeFiller()
         return theme;
     }
 
-	public void makeWordBasic()
+	public void makeWordBasic() //Breaks down keyword to smaller bits before checking against filler.txt
 	{
 		String[] input = new String[keywords.size()];
 		for(int i = 0; i <keywords.size(); i++)
@@ -168,7 +174,7 @@ public void removeFiller()
 		
 	}
 	
-	public String compareToCelebrity(String userInput)
+	public String compareToCelebrity(String userInput)//checks which celebrity quote matches with the theme found
 	{
 		if(userInput.equals("ambitious"))
 		{
