@@ -18,7 +18,7 @@ public class Main{
         String name = "";
         
         //Intro prompts
-        System.out.println("Hi welcome to Celeb Check, Answer our questions and will match you up with a celebrity that matches your traits. Please enter your name to start the questions: ");
+        System.out.println("Hi! Welcome to Celebrity Check. Answer my questions I and will match you up with a celebrity that matches your traits. \nPlease enter your name to start the questions: ");
         name = input.nextLine();
         
         //runs until user doesn't want questions or the program runs out of questions
@@ -42,10 +42,12 @@ public class Main{
 			"How would you describe the people around you? ",
 			"What types of people do you think your morals are based on? ",
 			"How would your friends descirbe you? ",
-			"What are some traits you hope to never have? ",
-			"If you were reborn, what would you change about your personality? "};
+			"What would you change about your personality? ",
+			"How are you feeling right now? "};
 			
 			//Question 1
+			
+			System.out.println("Let's start with question 1:");
 			
 			//creates a random number with the range of the length of the list
 			int randomNum = (int)((Math.random()) * (questions.length));
@@ -68,6 +70,8 @@ public class Main{
 			
 			//Question 2 (same as question 1)
 			
+			System.out.println("Moving on to question 2:");
+			
 			reused = true;
 			randomNum = (int)((Math.random()) * (questions.length));
 		
@@ -86,6 +90,8 @@ public class Main{
 			usedNum.add(randomNum);
 			
 			//Question 3 (same as question 1)
+
+			System.out.println("Last question " + name + ":");
 			
 			reused = true;
 			randomNum = (int)((Math.random()) * (questions.length));
@@ -120,10 +126,12 @@ public class Main{
 				if(stillHere.charAt(0) == 'Y' || stillHere.charAt(0) == 'y' ){
 					wantQuestions = true;
 					properInput = true;
+					System.out.println("Awesome! Let's keep comparing you to a celebrity " + name + ".");
 				}
 				else if(stillHere.charAt(0) == 'N' || stillHere.charAt(0) == 'n') {
 					wantQuestions = false;
 					properInput = true;
+					System.out.println("Okay bye " + name + "!");
 				}
 			}
 			
